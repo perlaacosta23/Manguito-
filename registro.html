@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manguito - Crear Cuenta</title>
+    <!-- Tipografía Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="welcome-container registration-container">
+        
+        <!-- Isotipo Manguito arriba a la derecha con tamaño forzado a 70px -->
+        <header class="top-logo-box">
+            <img src="manguito elementos/ISOTIPO.svg" alt="Isotipo Manguito" class="isotipo-img" width="70" style="width: 70px !important; height: auto;">
+        </header>
+
+        <!-- Títulos principales -->
+        <div class="text-group align-left">
+            <h2 class="welcome-title register-title">¡Empecemos!</h2>
+            <p class="welcome-description register-subtitle">
+                Creá una cuenta y comenzá a organizar la plata a tu manera.
+            </p>
+        </div>
+
+        <!-- Formulario de Registro -->
+        <form id="form-registro" class="register-form">
+            <div class="input-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="¿Cómo te llamás?" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" placeholder="tuemail@ejemplo.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" placeholder="••••••••" required minlength="8">
+                <span class="helper-text">Usá al menos 8 caracteres.</span>
+            </div>
+
+            <div class="input-group">
+                <label for="repeat-password">Repetir contraseña</label>
+                <input type="password" id="repeat-password" placeholder="Volvé a ingresar tu contraseña." required>
+            </div>
+
+            <!-- Botón y Términos -->
+            <div class="action-group full-width">
+                <button type="submit" class="btn-primary">Siguiente</button>
+                <p class="terms-text">
+                    Al continuar, aceptás nuestros términos, condiciones y política de privacidad.
+                </p>
+            </div>
+        </form>
+
+    </main>
+
+    <!-- Base de datos local (LocalStorage) -->
+    <script>
+        document.getElementById('form-registro').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('password').value;
+            const repeatPass = document.getElementById('repeat-password').value;
+
+            if (pass !== repeatPass) {
+                alert('Las contraseñas no coinciden. Por favor verificá ambas.');
+                return;
+            }
+
+            const usuario = {
+                nombre: nombre,
+                email: email,
+                password: pass
+            };
+
+            localStorage.setItem('manguito_usuario', JSON.stringify(usuario));
+            alert('¡Cuenta creada y guardada con éxito en la base de datos local!');
+        });
+    </script>
+</body>
+</html>
