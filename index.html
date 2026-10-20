@@ -1,49 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manguito - Aprendé a cuidarlo</title>
-    <!-- Tipografía Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Manguito te ayuda a organizar tus ingresos, gastos y vencimientos.">
+    <title>Manguito | Tu economía, más clara</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="icon-paw" viewBox="0 0 24 24">
+        <path d="M8.1 11.1c-1.6 0-2.8 1.6-2.8 3.4 0 1.1.6 1.8 1.5 1.8.8 0 1.3-.5 2-.9.7-.4 1.4-.6 2.2-.6s1.5.2 2.2.6c.7.4 1.2.9 2 .9.9 0 1.5-.7 1.5-1.8 0-1.8-1.2-3.4-2.8-3.4-1 0-1.8.6-2.9.6s-1.9-.6-2.9-.6ZM4.2 7.3c-.9 0-1.6 1-1.6 2.2s.7 2.2 1.6 2.2 1.6-1 1.6-2.2-.7-2.2-1.6-2.2Zm5-3.1c-.9 0-1.7 1-1.7 2.3s.8 2.3 1.7 2.3 1.7-1 1.7-2.3-.8-2.3-1.7-2.3Zm5.6 0c-.9 0-1.7 1-1.7 2.3s.8 2.3 1.7 2.3 1.7-1 1.7-2.3-.8-2.3-1.7-2.3Zm5 3.1c-.9 0-1.6 1-1.6 2.2s.7 2.2 1.6 2.2 1.6-1 1.6-2.2-.7-2.2-1.6-2.2Z"/>
+      </symbol>
+      <symbol id="icon-bag" viewBox="0 0 24 24">
+        <path d="M5 8.5h14l1.2 11H3.8L5 8.5Zm3.5 0a3.5 3.5 0 0 1 7 0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </symbol>
+      <symbol id="icon-sparkles" viewBox="0 0 24 24">
+        <path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Zm7 11 .9 2.1L22 17l-2.1.9L19 20l-.9-2.1L16 17l2.1-.9L19 14ZM5 15l1.1 2.9L9 19l-2.9 1.1L5 23l-1.1-2.9L1 19l2.9-1.1L5 15Z"/>
+      </symbol>
+      <symbol id="icon-bus" viewBox="0 0 24 24">
+        <path d="M5 17h14l1-3V6c0-1.7-1.3-3-3-3H7C5.3 3 4 4.3 4 6v8l1 3Zm-1 0v2h2v-2m12 0v2h2v-2M5 8h14M7 13h2m6 0h2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </symbol>
+      <symbol id="icon-scissors" viewBox="0 0 24 24">
+        <circle cx="6" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="6" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="m8 8 12 12M8 16 20 4m-6 6 3 3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/>
+      </symbol>
+      <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+        <path d="m14.5 5-7 7 7 7M8 12h13" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+      </symbol>
+      <symbol id="icon-chevron" viewBox="0 0 24 24">
+        <path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </symbol>
+    </svg>
 
-    <main class="welcome-container">
-        
-        <!-- Logo de Manguito -->
-        <header class="logo-box">
-            <img src="manguito elementos/logomanguitoaprendeacuidarlo.svg" alt="Logo Manguito" class="logo-img">
-        </header>
-
-        <!-- Ilustración (Fondo verde + Personaje) -->
-        <div class="hero-illustration">
-            <img src="manguito elementos/fondo verde dtras del mango.svg" alt="" class="bg-shape">
-            <img src="manguito elementos/mangoconcelular.svg" alt="Mangui saludando con el celular" class="mangui-img">
-        </div>
-
-        <!-- Textos principales -->
-        <div class="text-group">
-            <h2 class="welcome-title">¡Hola! Soy Mangui.</h2>
-            <p class="welcome-description">
-                Te ayudo a registrar y visualizar tu economía cotidiana, de forma <strong>rápida y sencilla.</strong>
-            </p>
-        </div>
-
-        <!-- Botones y Enlaces -->
-        <div class="action-group">
-            <button id="btn-comenzar" class="btn-primary">Comenzar</button>
-            <p class="login-prompt">
-                ¿Ya tenés una cuenta?<br>
-                <a href="#" id="link-ingresar" class="login-link">Ingresá desde acá.</a>
-            </p>
-        </div>
-
+    <main class="app-shell">
+      <header class="top-bar" id="top-bar" hidden>
+        <button class="back-button" id="back-button" type="button" aria-label="Volver">
+          <svg><use href="#icon-arrow-left"></use></svg>
+        </button>
+        <a class="brand" href="#inicio" aria-label="Manguito, inicio">
+          <span class="isotipo-window" aria-hidden="true">
+            <img src="assets/isotipo-mark.svg" alt="">
+          </span>
+          <img class="brand-wordmark" src="assets/TAMBIEN logomanguitovectorizado .svg" alt="Manguito">
+        </a>
+      </header>
+      <div id="app-content" class="app-content"></div>
+      <nav id="bottom-nav" class="bottom-nav" aria-label="Navegación principal" hidden></nav>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
     </main>
-
-    <script src="app.js"></script>
-</body>
+  </body>
 </html>
